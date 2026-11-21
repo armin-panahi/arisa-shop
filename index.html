@@ -1,20 +1,195 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="فروشگاه آریسا" />
-  <link rel="shortcut icon" href="public/icons/favicon.png" type="image/x-icon">
-  <title>فروشگاه آریسا</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="فروشگاه آریسا" />
+    <link
+      rel="shortcut icon"
+      href="public/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <title>فروشگاه آریسا</title>
+    <link rel="stylesheet" href="/src/styles/container.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/styles/header-navigation.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions" aria-label="دسترسی‌های سریع">
+          <a class="icon-button cart-button" href="#cart" aria-label="سبد خرید">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M3.5 4.5h2l1.8 10.1a2 2 0 0 0 2 1.7h7.9a2 2 0 0 0 1.9-1.5l1.3-6.3H6.1"
+              />
+              <circle cx="9.5" cy="19.2" r="1.1" />
+              <circle cx="17.2" cy="19.2" r="1.1" />
+            </svg>
+            <span class="cart-count" aria-label="۰ محصول">۰</span>
+          </a>
 
+          <a class="icon-button" href="#search" aria-label="جست‌وجو">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="10.8" cy="10.8" r="6.2" />
+              <path d="m15.4 15.4 4.1 4.1" />
+            </svg>
+          </a>
+        </div>
 
+        <!-- DESKTOP MAIN MENU -->
+        <nav class="main-nav" aria-label="منوی اصلی">
+          <a href="#home">خانه</a>
+          <a href="#categories">دسته‌بندی محصولات</a>
+          <a href="#popular">محبوب‌ترین‌ها</a>
+          <a href="#offers">تخفیف‌ها</a>
+          <a href="#smart-suggestions">پیشنهاد هوشمند</a>
+        </nav>
 
+        <!-- لوگو سمت راست -->
+        <a class="brand" href="#home" aria-label="آرسا، صفحه اصلی">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="110 20 1780 700"
+            role="img"
+            aria-labelledby="arisaTitle arisaDesc"
+          >
+            <title id="arisaTitle">لوگوی آریسا</title>
+            <desc id="arisaDesc">
+              لوگوی سبز آریسا با برگ‌های تزئینی و تاج طلایی
+            </desc>
 
+            <defs>
+              <!-- Green Gradient -->
+              <linearGradient id="arisaGreen" x1="0" y1="0" x2="0.25" y2="1">
+                <stop offset="0" stop-color="#39784a" />
+                <stop offset="0.24" stop-color="#0e5630" />
+                <stop offset="0.62" stop-color="#064023" />
+                <stop offset="1" stop-color="#012a17" />
+              </linearGradient>
 
-  
-</body>
+              <!-- Gold Gradient -->
+              <linearGradient id="arisaGold" x1="0" y1="0" x2="0.2" y2="1">
+                <stop offset="0" stop-color="#fff1a2" />
+                <stop offset="0.22" stop-color="#f6c44e" />
+                <stop offset="0.48" stop-color="#b87513" />
+                <stop offset="0.72" stop-color="#ffe18a" />
+                <stop offset="1" stop-color="#8e4d08" />
+              </linearGradient>
+
+              <!-- Green Shadow -->
+              <filter
+                id="greenShadow"
+                x="-10%"
+                y="-15%"
+                width="120%"
+                height="140%"
+              >
+                <feGaussianBlur
+                  in="SourceAlpha"
+                  stdDeviation="5"
+                  result="blur"
+                />
+                <feOffset dy="5" result="offset" />
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope=".42" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+
+              <!-- Gold Shadow -->
+              <filter
+                id="goldShadow"
+                x="-20%"
+                y="-20%"
+                width="140%"
+                height="150%"
+              >
+                <feGaussianBlur
+                  in="SourceAlpha"
+                  stdDeviation="3"
+                  result="blur"
+                />
+                <feOffset dy="3" result="offset" />
+                <feComponentTransfer>
+                  <feFuncA type="linear" slope=".35" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Main Wordmark, Leaves and Decorative Elements -->
+            <path
+              id="arisa-wordmark"
+              d="M321,611L350,604L390,600L465,604L532,616L685,656L796,680L881,690L972,692L900,685L824,672L745,654L601,614L498,594L454,590L395,591L364,596Z M1111,546L1106,534L1098,525L1089,519L1078,516L1066,516L1050,522L1038,534L1032,546L1027,537L1014,526L1003,522L986,522L974,527L962,538L956,550L954,565L961,585L969,593L981,599L996,601L1014,595L1025,586L1033,570L1039,581L1046,588L1058,594L1072,596L1090,591L1105,578L1111,565Z M147,556L164,554L177,557L224,581L239,585L256,586L269,584L296,573L333,543L359,532L347,532L324,527L284,507L253,498L230,498L203,506L186,516L162,537Z M1851,461L1831,450L1809,443L1791,442L1778,444L1756,454L1712,485L1692,493L1711,494L1749,506L1774,506L1799,496L1833,468L1844,462Z M241,435L257,449L285,491L307,508L322,515L341,520L384,522L408,527L395,518L388,510L370,473L359,457L334,437L316,430L300,427L271,428Z M1260,304L1253,304L1243,310L1202,343L1195,351L1195,356L1224,384L1234,404L1234,422L1224,441L1204,460L1186,472L1153,488L1118,498L1113,504L1116,512L1137,538L1157,557L1177,568L1189,568L1215,554L1256,518L1284,480L1300,442L1304,421L1304,388L1299,362L1291,341L1280,322L1266,307Z M1466,271L1461,271L1438,298L1436,306L1439,312L1439,319L1435,333L1426,354L1409,381L1420,413L1420,432L1417,442L1410,453L1385,476L1351,496L1303,513L1277,518L1271,522L1270,526L1275,535L1298,559L1316,573L1333,582L1353,588L1372,587L1387,581L1414,563L1437,541L1460,512L1487,460L1496,432L1501,399L1499,347L1493,319L1486,300L1473,277Z M1572,254L1554,257L1540,265L1527,277L1516,295L1511,324L1513,475L1509,508L1498,538L1488,553L1473,569L1449,585L1509,562L1541,541L1559,523L1569,508L1579,486L1589,439L1590,377L1581,276L1577,258Z M1789,250L1724,281L1679,307L1660,322L1631,354L1619,376L1611,401L1608,490L1598,514L1580,533L1561,546L1506,570L1438,593L1382,609L1288,629L1193,641L1142,644L1086,644L1033,641L969,633L905,621L793,593L698,565L603,542L537,532L476,531L440,535L386,547L356,558L327,572L293,596L274,616L264,630L253,655L259,646L286,621L307,608L342,592L366,584L408,575L469,571L541,577L594,587L690,612L808,648L905,671L1008,684L1106,684L1207,671L1272,657L1349,637L1443,607L1598,547L1650,532L1679,528L1704,528L1725,531L1765,544L1790,561L1780,550L1756,533L1738,525L1708,517L1688,515L1659,516L1621,524L1597,533L1594,532L1627,512L1654,499L1684,488L1719,469L1734,458L1759,430L1775,400L1784,367L1786,352L1784,267Z M370,257L381,427L388,461L401,488L414,503L429,513L449,520L485,524L529,524L563,521L594,515L624,506L652,493L674,477L683,467L692,485L702,496L717,505L736,509L751,509L773,504L794,494L811,479L829,498L853,507L876,507L894,502L916,490L927,478L945,494L972,503L1010,504L1028,502L1066,493L1102,474L1122,454L1132,438L1139,419L1141,390L1134,358L1116,328L1096,309L1086,305L1053,330L1033,350L1034,355L1062,383L1071,401L1071,414L1067,419L1055,426L1035,429L1007,429L987,426L971,419L964,413L956,398L951,354L948,348L942,345L933,349L919,362L896,411L891,417L880,424L864,424L854,418L849,412L842,395L837,354L831,346L824,346L810,356L799,370L789,397L779,415L765,425L749,426L741,422L731,410L727,397L724,355L720,347L711,344L696,357L678,381L658,401L638,416L619,426L597,434L564,440L526,441L501,438L485,433L474,426L466,416L460,398L458,210L453,192L450,189L441,191L414,217L374,250Z M1374,272L1378,276L1402,253L1422,243L1436,240L1458,240L1493,247L1534,251L1556,250L1605,241L1621,241L1634,245L1634,243L1627,234L1609,220L1566,197L1525,183L1491,178L1488,175L1489,173L1462,173L1443,177L1423,186L1410,195L1395,210L1378,240L1374,257Z"
+              fill="url(#arisaGreen)"
+              fill-rule="evenodd"
+              stroke="#032b18"
+              stroke-width="5"
+              stroke-linejoin="round"
+              filter="url(#greenShadow)"
+            />
+
+            <!-- Green Edge Highlight -->
+            <use
+              href="#arisa-wordmark"
+              fill="none"
+              stroke="#8aaa67"
+              stroke-width="2.2"
+              stroke-linejoin="round"
+              opacity=".38"
+              filter="none"
+            />
+
+            <!-- Golden Crown -->
+            <path
+              id="arisa-crown"
+              d="M1509,50L1503,56L1500,64L1502,77L1513,86L1505,149L1499,157L1500,161L1489,175L1491,177L1513,179L1539,186L1585,205L1620,227L1632,238L1635,246L1640,250L1643,250L1648,242L1649,229L1655,223L1654,215L1692,158L1697,154L1711,154L1721,146L1724,140L1724,129L1720,121L1715,116L1708,113L1695,114L1685,122L1682,128L1682,141L1680,143L1660,152L1648,155L1635,155L1627,149L1622,139L1619,125L1620,88L1629,84L1636,77L1639,70L1638,58L1630,48L1621,44L1613,44L1604,48L1599,53L1596,60L1596,73L1601,80L1601,84L1586,103L1572,117L1559,124L1553,124L1543,116L1530,90L1530,84L1539,74L1540,64L1538,58L1532,51L1524,47L1516,47Z"
+              fill="url(#arisaGold)"
+              fill-rule="evenodd"
+              stroke="#8b570e"
+              stroke-width="3"
+              stroke-linejoin="round"
+              filter="url(#goldShadow)"
+            />
+
+            <!-- Crown Highlight -->
+            <path
+              d="M1468 174 Q1535 191 1605 209 Q1667 224 1710 194"
+              fill="none"
+              stroke="#fff0ae"
+              stroke-width="4"
+              stroke-linecap="round"
+              opacity=".7"
+            />
+          </svg>
+        </a>
+
+        <!-- منوی موبایل؛ بدون نیاز به JavaScript -->
+        <details class="mobile-menu">
+          <summary class="icon-button menu-toggle" aria-label="باز کردن منو">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </summary>
+          <nav class="mobile-nav" aria-label="منوی موبایل">
+            <a href="#home">خانه</a>
+            <a href="#categories">دسته‌بندی محصولات</a>
+            <a href="#popular">محبوب‌ترین‌ها</a>
+            <a href="#offers">تخفیف‌ها</a>
+            <a href="#smart-suggestions">پیشنهاد هوشمند</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+  </body>
 </html>
